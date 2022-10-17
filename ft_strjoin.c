@@ -1,23 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 20:18:04 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/16 14:15:11 by aarchtou         ###   ########.fr       */
+/*   Created: 2022/10/16 15:08:44 by aarchtou          #+#    #+#             */
+/*   Updated: 2022/10/16 15:22:02 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-void	ft_bzero(void *b, size_t c)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	ft_memset(b, '\0', c);
+	int		a;
+	int		i;
+	int		l;
+	int		t;
+	char	*ptr;
+
+	i = 0;
+	t = 0;
+	l = 0;
+	a = ft_strlen(s1) + ft_strlen(s2) + 1;
+	ptr = (char *)malloc(sizeof(char) * a);
+	if (ptr == NULL)
+		return (NULL);
+	while (s1[i])
+	{
+		ptr[l++] = s1[i++];
+	}
+	while (s2[t])
+	{
+		ptr[l++] = s2[t++];
+	}
+	ptr[l] = '\0';
+	return (ptr);
 }
-// int main() {
-//   char h[9] = "vgjadvhc";
-//   ft_bzero(h, 3);
-//   printf("%s",h);
-// }

@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 20:18:04 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/16 14:15:11 by aarchtou         ###   ########.fr       */
+/*   Created: 2022/10/16 09:01:36 by aarchtou          #+#    #+#             */
+/*   Updated: 2022/10/16 11:21:59 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-void	ft_bzero(void *b, size_t c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	ft_memset(b, '\0', c);
+	int	i;
+
+	i = 0;
+	if (s[i])
+	{
+		ft_putstr_fd(s, fd);
+		ft_putchar_fd('\n', fd);
+	}
 }
-// int main() {
-//   char h[9] = "vgjadvhc";
-//   ft_bzero(h, 3);
-//   printf("%s",h);
-// }

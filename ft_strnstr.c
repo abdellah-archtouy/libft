@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:42:56 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/14 15:47:56 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/16 11:53:34 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,25 +48,25 @@
 // 	}
 // 	return (0);
 // }
-char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *s1, const char *s2, size_t len)
 {
 	size_t	h;
 	size_t	n;
 
 	h = 0;
-	if (needle[0] == '\0')
-		return ((char *)haystack);
-	while (haystack[h] != '\0')
+	if (s2[0] == '\0')
+		return ((char *)s1);
+	while (s1[h] != '\0')
 	{
 		n = 0;
-		while (haystack[h + n] == needle[n] && (h + n) < len)
+		while (s1[h + n] == s2[n] && (h + n) < len)
 		{
-			if (haystack[h + n] == '\0' && needle[n] == '\0')
-				return ((char *)&haystack[h]);
+			if (s1[h + n] == '\0' && s2[n] == '\0')
+				return ((char *)&s1[h]);
 			n++;
 		}
-		if (needle[n] == '\0')
-			return ((char *)haystack + h);
+		if (s2[n] == '\0')
+			return ((char *)s1 + h);
 		h++;
 	}
 	return (0);
@@ -74,5 +74,5 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 // int main ()
 // {
 // 	char haystack[30] = "aaabcabcd";
-// 	printf("%s",ft_strnstr(haystack, "cd",8));
+// 	printf("%s",ft_strnstr(haystack, "ab",8));
 // }

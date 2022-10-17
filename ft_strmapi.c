@@ -1,23 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 20:18:04 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/16 14:15:11 by aarchtou         ###   ########.fr       */
+/*   Created: 2022/10/17 09:23:34 by aarchtou          #+#    #+#             */
+/*   Updated: 2022/10/17 09:41:21 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-void	ft_bzero(void *b, size_t c)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	ft_memset(b, '\0', c);
+	int		i;
+	char	*ptr;
+
+	i = 0;
+	ptr = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
+	if (ptr == NULL)
+		return (NULL);
+	while (s[i])
+	{
+		ptr[i] = (*f)(i, s[i]);
+		i++;
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
-// int main() {
-//   char h[9] = "vgjadvhc";
-//   ft_bzero(h, 3);
-//   printf("%s",h);
-// }

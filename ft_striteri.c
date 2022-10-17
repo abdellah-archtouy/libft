@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 20:18:04 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/16 14:15:11 by aarchtou         ###   ########.fr       */
+/*   Created: 2022/10/17 10:02:37 by aarchtou          #+#    #+#             */
+/*   Updated: 2022/10/17 10:05:03 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"libft.h"
+#include "libft.h"
 
-void	ft_bzero(void *b, size_t c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	ft_memset(b, '\0', c);
+	int		i;
+
+	i = 0;
+	while (s[i])
+	{
+		(*f)(i, &s[i]);
+		i++;
+	}
 }
-// int main() {
-//   char h[9] = "vgjadvhc";
-//   ft_bzero(h, 3);
-//   printf("%s",h);
-// }
