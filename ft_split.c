@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 10:27:34 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 13:36:51 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/17 17:43:07 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,8 @@ char	**ft_chek(char const *s, char c, char **strings, int words_count)
 	while (a < words_count)
 	{
 		while (s[index] && s[index] == c)
-				index++;
-			len = 0;
+			index++;
+		len = 0;
 		while (s[len + index] && s[len + index] != c)
 			len++;
 		sub = (char *)malloc(sizeof(char) * (len + 1));
@@ -65,34 +65,12 @@ char	**ft_split(char const *s, char c)
 	char	**strings;
 	int		words_count;
 
+	if (s == 0)
+		return (0);
 	words_count = chek_word(s, c);
 	strings = (char **)malloc(sizeof(char *) * (words_count + 1));
+	if (strings == 0)
+		return (0);
 	ft_chek(s, c, strings, words_count);
 	return (strings);
 }
-
-	// while (s[index])
-	// {
-	// 	while (s[index] && s[index] == c)
-	// 		index++;
-	// 	len = 0;
-	// 	while (s[len + index] && s[len + index] != c)
-	// 		len++;
-	// 	if (len == 0 && s[len + index] == 0)
-	// 		break ;
-	// 	sub = (char *)malloc(sizeof(char) * (len + 1));
-	// 	l = 0;
-	// 	while (s[index] && s[index] != c)
-	// 		sub[l++] = s[index++];
-	// 	sub[l] = 0;
-	// 	strings[a++] = sub;
-	// }
-// #include<stdio.h>
-
-// int	main(void)
-// {
-// 	char	**p;
-	
-// 	p = ft_split("  abdo      art be le chd hcdbshbc bchd", ' ');
-// 	printf("%s", p);
-// }

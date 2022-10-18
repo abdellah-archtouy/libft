@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:14:24 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/12 10:37:19 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/17 15:51:30 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,18 +16,19 @@ void	*ft_memmove(void *dst, const void *src, int len)
 {
 	char	*src1;
 	char	*dst1;
-	int		l;
 
 	dst1 = (char *)dst;
 	src1 = (char *)src;
-	l = ft_strlen(dst) - len;
-	l = ft_strlen(dst) - l;
-	if ((char *)src == NULL || (char *)dst1 == NULL)
-		return (NULL);
+	if ((char *)src == NULL && (char *)dst1 == NULL)
+		return (dst);
 	if (dst1 >= src1)
 	{
-		while (l-- > 0)
-			dst1[l] = src1[l];
+		len--;
+		while (len >= 0)
+		{
+			dst1[len] = src1[len];
+			len--;
+		}
 	}
 	else
 		ft_memcpy(dst1, src1, len);

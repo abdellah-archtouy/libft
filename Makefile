@@ -10,7 +10,13 @@ SRC = ft_memset.c ft_atoi.c ft_isalpha.c ft_isdigit.c ft_bzero.c \
 				 ft_strjoin.c ft_strtrim.c ft_strmapi.c ft_striteri.c \
 				 ft_split.c
 
+SRCB = ft_lstnew.c ft_lstadd_front.c ft_lstlast.c ft_lstadd_back.c \
+					ft_lstsize.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c \
+					ft_lstmap.c
+
 OBJ = $(SRC:%.c=%.o)
+
+OBJB = $(SRCB:%.c=%.o)
 
 CFALGS =  -Wall -Wextra -Werror
 
@@ -24,10 +30,17 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
+
 %.o : %.c $(INCLUDE)
-	@$(CC) -c $(CFALGS) $< -o $@ 
+	@$(CC) -c $(CFALGS) $< -o $@
+
+bonus: $(OBJ) $(OBJB)
+	@ar rc $(NAME) $(OBJB) $(OBJ)
+
 clean:
-	@rm -rf $(OBJ)
+	@rm -rf $(OBJ) $(OBJB)
+
 fclean: clean
-	@rm -rf $(NAME)	
+	@rm -rf $(NAME)
+
 re: fclean all

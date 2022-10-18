@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 10:02:37 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 10:05:03 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:56:50 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	int		i;
 
 	i = 0;
+	if (s == 0)
+		return ;
 	while (s[i])
 	{
 		(*f)(i, &s[i]);

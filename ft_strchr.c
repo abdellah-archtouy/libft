@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:24:16 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/13 16:09:38 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/17 15:39:00 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,6 @@ char	*ft_strchr( const char *s, int c)
 	char	*s1;
 
 	s1 = (char *)s;
-	if (s1 == NULL)
-		return (NULL);
 	while (*s1)
 	{
 		if (*s1 == (unsigned char)c)

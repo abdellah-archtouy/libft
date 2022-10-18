@@ -1,40 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/10 19:00:12 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 15:44:51 by aarchtou         ###   ########.fr       */
+/*   Created: 2022/10/18 09:16:15 by aarchtou          #+#    #+#             */
+/*   Updated: 2022/10/18 09:19:22 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	char	*s;
-	char	*d;
-	int		i;
+	int	len;
 
-	s = (char *)src;
-	d = (char *)dst;
-	i = 0;
-	if (dst == 0 && src == 0)
-		return (0);
-	while (n > 0)
+	len = 0;
+	while (lst)
 	{
-	d[i] = s[i];
-		i++;
-		n--;
+		lst = lst->next;
+		len++;
 	}
-	return (d);
+	return (len);
 }
-// int main()
-// {
-//     char str[] = "mohcine";
-//     char des[] = "ghalmi";
-//     // printf("%s\n" , ft_memcpy(des, str, 5));
-//     // printf("%s" , memcpy(des, str, 9));
-// }

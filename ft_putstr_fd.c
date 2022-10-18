@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/14 11:00:56 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/14 11:14:18 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/17 16:48:42 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *str, int fd)
 	int	a;
 
 	a = 0;
+	if (str == 0)
+		return ;
 	while (str[a])
 	{
 		write (fd, &str[a], 1);

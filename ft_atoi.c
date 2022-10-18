@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:11:09 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/14 12:49:41 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/18 13:48:34 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,7 @@ int	ft_atoi(const char *str)
 	}
 	return (r * b);
 }
-// int main ()
+// int main()
 // {
-//     printf("%d\n",ft_atoi("99999999999999999999999999"));
-//     printf("%d",atoi("99999999999999999999999999"));
+// 	printf("%d" , ft_atoi("-42"));
 // }

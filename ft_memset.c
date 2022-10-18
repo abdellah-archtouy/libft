@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:16:36 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/12 12:31:48 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/17 15:42:01 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *b, int c, size_t len)
 		s[i] = c;
 		i++;
 	}
-	return (0);
+	return (b);
 }
 // #include <stdio.h>
 

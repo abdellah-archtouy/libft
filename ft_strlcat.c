@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 18:24:59 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/14 15:46:10 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/17 15:37:35 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	d;
 
 	d = 0;
+	if (dst == 0 && dstsize == 0)
+		return (ft_strlen(src));
 	c = ft_strlen(dst);
 	if (dstsize <= (size_t)ft_strlen(dst))
 		return (dstsize + ft_strlen(src));
