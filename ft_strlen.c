@@ -6,13 +6,13 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 08:09:00 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 09:34:04 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/19 09:42:02 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strlen(const char *c)
+size_t	ft_strlen(const char *c)
 {
 	int	i;
 

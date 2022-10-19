@@ -24,8 +24,6 @@ CC = gcc
 
 INCLUDE = libft.h
 
-
-
 all: $(NAME)
 
 $(NAME): $(OBJ)

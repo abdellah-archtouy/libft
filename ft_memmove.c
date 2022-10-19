@@ -6,34 +6,42 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:14:24 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 15:51:30 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/19 11:39:38 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, int len)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*src1;
 	char	*dst1;
+	int		i;
 
 	dst1 = (char *)dst;
 	src1 = (char *)src;
+	i = (int)len;
 	if ((char *)src == NULL && (char *)dst1 == NULL)
 		return (dst);
 	if (dst1 >= src1)
 	{
-		len--;
-		while (len >= 0)
+		i--;
+		while (i >= 0)
 		{
-			dst1[len] = src1[len];
-			len--;
+			dst1[i] = src1[i];
+			i--;
 		}
 	}
 	else
-		ft_memcpy(dst1, src1, len);
+		ft_memcpy(dst1, src1, i);
 	return (dst);
 }	
+
+// int main()
+// {
+// 	char str[] = "123456";
+// 	printf("%s", ft_memmove(str+3, str+1, 4));
+// }
 /*len--;
 	while (len >= 0)
 	{

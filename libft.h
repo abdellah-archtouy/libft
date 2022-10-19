@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:28:10 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/18 13:43:01 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/19 11:37:44 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int		ft_toupper(int c);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 int		ft_atoi(const char *str);
-int		ft_strlen( const char *c);
+size_t	ft_strlen( const char *c);
 t_list	*ft_lstnew(void *content);
 char	*ft_strdup(const char *s1);
 void	ft_bzero(void *b, size_t c);
@@ -69,7 +69,7 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
-void	*ft_memmove(void *dst, const void *src, int len);
+void	*ft_memmove(void *dst, const void *src, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 int		ft_memcmp( const void *a, const void *b, size_t n);
 int		ft_strncmp( const char *a, const char *b, size_t n);
