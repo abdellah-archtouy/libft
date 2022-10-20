@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:26:15 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 18:55:57 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/19 15:16:59 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 t_list	*ft_lstlast(t_list *lst)
 {
 	while (lst && lst->next)
-	{
 		lst = lst->next;
-	}
 	return (lst);
 }

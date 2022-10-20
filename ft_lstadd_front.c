@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 18:09:07 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 18:18:44 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/19 15:29:13 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,16 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!new)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }
+//  int main()
+//  {
+// 	t_list *top;
+
+// 	top = ft_lstnew("topoop");
+// 	ft_lstadd_front(&top, NULL);
+// 	return 0;
+//  }
