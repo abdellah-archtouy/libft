@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 18:14:24 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/19 11:39:38 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/22 16:53:07 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,23 +36,3 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		ft_memcpy(dst1, src1, i);
 	return (dst);
 }	
-
-// int main()
-// {
-// 	char str[] = "123456";
-// 	printf("%s", ft_memmove(str+3, str+1, 4));
-// }
-/*len--;
-	while (len >= 0)
-	{
-		dst1[len] = src1[len];
-		len--;
-	}*/
-// int main ()
-// {
-// char dst[100] = "abdollah";
-// char src[100] = "abdollah";
-// // printf("or = %lu\n", strlen(src+2));
-// printf("my = %s\n",ft_memmove(src+2, src, 2));
-// printf("or = %s\n", memmove(dst+2,dst, 2));
-// }

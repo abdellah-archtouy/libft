@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 09:23:34 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/21 21:47:11 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/22 16:55:34 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
-	char	*ptr;
+	unsigned int	i;
+	char			*ptr;
 
 	i = 0;
 	if (s == 0)
@@ -31,9 +31,3 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	ptr[i] = '\0';
 	return (ptr);
 }
-
-// int main()
-// {
-// 	char *s = ft_strmapi("hello", &f);
-// 	printf("%s", s);
-// }

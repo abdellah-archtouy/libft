@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:04:13 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/13 15:32:53 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/22 16:52:37 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,3 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	}
 	return (0);
 }
-// int main()
-// {
-// 	char s[] = {0, 1, 2 ,3 ,4 ,5};
-//     printf("%s\n",memchr(s,0,8));
-//     printf("%s\n",ft_memchr(s,0,8));
-// }

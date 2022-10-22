@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 10:04:14 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/14 13:03:48 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/22 16:54:22 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	if (dst[0] == '\0')
 		return (ft_strlen(src));
 }
-// int main()
-// {
-//     char s[] = "coucou";
-//     char b[10] = "a";
-//     printf("%zu\n", ft_strlcpy(b,"1",0));
-//     // printf("%zu\n", strlcpy(b,"1",0));
-//     // printf("%zu\n", strlcpy(b,s,7));
-//     printf("%s", b);
-// }

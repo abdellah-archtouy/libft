@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 09:05:00 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/14 11:20:30 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/22 16:54:54 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,3 @@ char	*ft_strrchr(const char *s, int c)
 		return (s1);
 	return (0);
 }
-// int main()
-// {
-//     char s[] = "tripouille";
-// 	char s2[] = "ltripouiel";
-// 	char s3[] = "";
-//     printf("%s\n", strrchr(s,0));
-//     printf("%s\n", ft_strrchr(s,0));
-// }

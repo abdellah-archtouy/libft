@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:00:12 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/19 10:10:38 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/22 16:52:54 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,3 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (d);
 }
-// int main()
-// {
-//     char str[] = "mohcine";
-//     char des[] = "ghalmi";
-//     // printf("%s\n" , ft_memcpy(des, str, 5));
-//     // printf("%s" , memcpy(des, str, 9));
-// }

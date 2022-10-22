@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 18:24:59 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 15:37:35 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/22 16:54:17 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst[c] = '\0';
 	return (ft_strlen(dst) + ft_strlen(&src[d]));
 }
-// int main()
-// {
-// 	char str[10] = "B";
-// 	char str_2[] = "AAAAAAAA";
-//     // printf("%zu", strlcat(str,str_2,3));
-//     printf("%lu", ft_strlcat(str, str_2,0));
-// 	printf("|%s|\n", str);
-// }

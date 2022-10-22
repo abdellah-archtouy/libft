@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 19:01:53 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 16:23:26 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/22 16:55:51 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,3 @@ int	ft_memcmp(const void *a, const void *b, size_t n)
 		i++;
 	return (s1[i] - s2[i]);
 }
-
-// int main() {
-// 	char *s1 = "\xff\xaa\xde\xffMACOSX\xff";
-// 	char *s2 = "\xff\xaa\xde\x02";
-// 	printf("%d, %d\n", ft_memcmp(s1, s2, 8), '\xff' - '\x02');
-// }
-// 

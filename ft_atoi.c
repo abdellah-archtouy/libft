@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 11:11:09 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/21 17:51:29 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/22 14:57:59 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,4 @@ int	ft_atoi(const char *str)
 		i++;
 	}
 	return (r * b);
-}
-int main()
-{
-	printf("%d\n" , ft_atoi("-214748364900000000"));
-	printf("%d" , atoi("-214748364900000000"));
 }

@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 20:18:04 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/16 14:15:11 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/22 14:58:12 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,3 @@ void	ft_bzero(void *b, size_t c)
 {
 	ft_memset(b, '\0', c);
 }
-// int main() {
-//   char h[9] = "vgjadvhc";
-//   ft_bzero(h, 3);
-//   printf("%s",h);
-// }
