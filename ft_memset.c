@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 19:16:36 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 15:42:01 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/21 21:33:01 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,19 +32,20 @@ void	*ft_memset(void *b, int c, size_t len)
 // {
 //     int i = 0;
 //     int t = 0;
-// 	int b[] = {1,2,3};
+// 	int b = 2;
 // 	int a[] = {1,2,3};
-// 	ft_memset(b, '1', sizeof(int) * 3);
-// 	while (b[i])
+// 	ft_memset(a, 4, 3);
+// 	while (i < 3)
 // 	{
-// 		printf("%c" , b[i]);
+// 		printf("|%d|" , a[i]);
 // 		i++;
 // 	}
+
 // 		printf("\n");
-// 	memset(b, '1', sizeof(int) * 3);
-// 	while (b[t])
-// 	{
-// 		printf("%c" , a[t]);
-// 		t++;
-// 	}
+// 	// memset(b, '1', sizeof(int) * 3);
+// 	// while (b[t])
+// 	// {
+// 	// 	printf("%c" , a[t]);
+// 	// 	t++;
+// 	// }
 // }

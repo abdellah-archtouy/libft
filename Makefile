@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/10/21 15:23:45 by aarchtou          #+#    #+#              #
+#    Updated: 2022/10/21 19:08:38 by aarchtou         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 SRC = ft_memset.c ft_atoi.c ft_isalpha.c ft_isdigit.c ft_bzero.c \
@@ -20,7 +32,7 @@ OBJB = $(SRCB:%.c=%.o)
 
 CFALGS =  -Wall -Wextra -Werror
 
-CC = gcc
+CC = cc
 
 INCLUDE = libft.h
 
@@ -30,10 +42,10 @@ $(NAME): $(OBJ)
 	@ar rc $(NAME) $(OBJ)
 
 %.o : %.c $(INCLUDE)
-	@$(CC) -c $(CFALGS) $< -o $@
+	@$(CC) $(CFALGS) -c $< -o $@
 
-bonus: $(OBJ) $(OBJB)
-	@ar rc $(NAME) $(OBJB) $(OBJ)
+bonus: $(OBJB)
+	@ar rc $(NAME) $(OBJB)
 
 clean:
 	@rm -rf $(OBJ) $(OBJB)
