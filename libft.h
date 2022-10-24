@@ -6,16 +6,13 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 09:28:10 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/21 15:16:21 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/23 15:19:43 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdlib.h>
-# include <strings.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 # define MAX 18446744073709551615UL
