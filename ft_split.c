@@ -6,7 +6,7 @@
 /*   By: aarchtou <aarchtou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 10:27:34 by aarchtou          #+#    #+#             */
-/*   Updated: 2022/10/17 17:43:07 by aarchtou         ###   ########.fr       */
+/*   Updated: 2022/10/26 09:53:17 by aarchtou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,20 @@ static int	chek_word(char const *a, char c)
 	return (t);
 }
 
+void	ft_free_all(char	**strings, int a)
+{
+	while (a >= 0)
+	{
+		free(strings[a]);
+		a--;
+	}
+	return ;
+}
+
 char	**ft_chek(char const *s, char c, char **strings, int words_count)
 {
 	char	*sub;
 	int		index;
-	int		len;
 	int		a;
 	int		l;
 
@@ -46,10 +55,12 @@ char	**ft_chek(char const *s, char c, char **strings, int words_count)
 	{
 		while (s[index] && s[index] == c)
 			index++;
-		len = 0;
-		while (s[len + index] && s[len + index] != c)
-			len++;
-		sub = (char *)malloc(sizeof(char) * (len + 1));
+		l = 0;
+		while (s[l + index] && s[l + index] != c)
+			l++;
+		sub = (char *)malloc(sizeof(char) * (l + 1));
+		if (!sub)
+			ft_free_all(strings, a);
 		l = 0;
 		while (s[index] && s[index] != c)
 			sub[l++] = s[index++];
